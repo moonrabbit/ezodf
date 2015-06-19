@@ -63,7 +63,7 @@ def get_min_max_cell_count(xmltable):
         return (0, 0)
 
 def get_table_rows(xmltable):
-    return xmltable.findall('.//'+CN('table:table-row'))
+    return xmltable.findall('./'+CN('table:table-row'))
 
 def count_cells_in_row(xmlrow):
     return sum( (RepetitionAttribute(xmlcell).cols for xmlcell in xmlrow) )
